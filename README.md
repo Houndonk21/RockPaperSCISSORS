@@ -2,4 +2,4 @@
 
 ROCK PAPER SCISSORS GAME
 
-LIVE PREVIEW: 
+LIVE PREVIEW: https://houndonk21.github.io/RockPaperSCISSORS/
