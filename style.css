@@ -1,0 +1,104 @@
+/* html document*/
+html
+{
+    position: relative;
+    min-height: 100%;
+}
+body
+{
+    line-height: 1.6;
+    margin:0;
+    background-color: #ccc;
+}
+/* HEADER */
+.title
+{
+    font-family: "Comforter";
+    font-size: 50px;
+    color: yellow;
+}
+.header
+{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    background-color: darkslategray;
+    width: 100%;
+}
+/* main */
+.results
+{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: red;
+}
+.score
+{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: red;
+}
+.player, 
+.computer
+{
+    font-size: 20px;
+}
+.selection
+{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.player-selection,
+.computer-selection
+{
+    width: 300px;
+    height: 200px;
+}
+/* buttons */
+.buttons
+{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    
+}
+.button
+{
+    height: -20px;
+    width: -20px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    transition: 100ms;
+    
+}
+.button:hover
+{
+    transform: scale(1.05);
+}
+.imgs,
+.imgr,
+.imgp
+{
+    width: 450px;
+    height: 300px;
+}
+/*footer */
+footer 
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

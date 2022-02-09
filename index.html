@@ -5,9 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    
+    <header class="header">
+        <h1 class="title">Rock Paper Scissors</h1>
+    </header>
+    <main class="main">
+        <div class="results">
+            First to five points wins!!!!
+        </div>
+        <div class="selection">
+            <img class = "player-selection" src="">
+            <img class="computer-selection" src="">
+        </div>
+        <div class="score"> 
+            <div>
+                YOU
+                <span class="player">0</span>
+            </div>
+            <div>
+                Computer
+                <span class="computer">0</span>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="rock" class = "button" type = "button"><img class= "imgr" src="https://i.ytimg.com/vi/NtT5oizOFiY/maxresdefault.jpg"></button>
+            <button id="paper" class = "button" type= "button"><img class = "imgp" src="https://previews.123rf.com/images/taesmileland/taesmileland1210/taesmileland121000034/15741972-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%9A%A9%EC%A7%80-%EB%8F%84%EB%A9%B4.jpg"></button>
+            <button id="scissors" class = "button" type= "button"><img class="imgs" src="https://www.clipartmax.com/png/middle/289-2890339_black-scissors-office-drawing-open-sketch-scissors-drawing.png"></button>
+        </div>
+    </main>
+    <footer>
+        <p>Made by VAMANU VICENTIU 2022 <a href="https://github.com/Houndonk21">https://github.com/Houndonk21</a></p>
+    </footer>
 </body>
 </html>

@@ -1,5 +1,111 @@
+let pWins = 0;
+let cWins = 0;
+const rock = document.getElementById('rock');
+const paper = document.getElementById('paper');
+const scissors = document.getElementById('scissors');
+const results = document.querySelector('.results');
+const player = document.querySelector(".player");
+const computer = document.querySelector(".computer");
+let imageComputer = document.querySelector(".computer-selection");
+let imagePlayer = document.querySelector(".player-selection");
 
-game();
+player.textContent = pWins;
+computer.textContent = cWins;
+rock.addEventListener('click', function(){
+    let msg1 =  playRound("rock", computerPlay());
+    results.textContent = msg1;
+    if (msg1 == "You won!!!!! Rock beats scissors" && pWins < 5 && cWins < 5) 
+    {
+        pWins++;
+        player.textContent = pWins;
+        imagePlayer.src="https://i.ytimg.com/vi/NtT5oizOFiY/maxresdefault.jpg";
+        imageComputer.src="https://www.clipartmax.com/png/middle/289-2890339_black-scissors-office-drawing-open-sketch-scissors-drawing.png";
+    }
+    else if (msg1 == "You lose!! Paper beats rock" && pWins < 5 && cWins < 5)
+    {
+        cWins++;
+        computer.textContent = cWins;
+        imagePlayer.src="https://i.ytimg.com/vi/NtT5oizOFiY/maxresdefault.jpg";
+        imageComputer.src="https://previews.123rf.com/images/taesmileland/taesmileland1210/taesmileland121000034/15741972-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%9A%A9%EC%A7%80-%EB%8F%84%EB%A9%B4.jpg";
+    }
+    else if (msg1 == "Tie!!! ROCK = ROCK" && pWins < 5 && cWins < 5)
+    {
+        imagePlayer.src="https://i.ytimg.com/vi/NtT5oizOFiY/maxresdefault.jpg";
+        imageComputer.src="https://i.ytimg.com/vi/NtT5oizOFiY/maxresdefault.jpg";
+    }
+    if (pWins == 5)
+    {
+        results.textContent = "YOU BEAT THE COMPUTER Mr/Ms LOVELACE";
+    }
+    else if (cWins == 5)
+    {
+        results.textContent = "It's a sad day for humans";
+    }
+}); 
+paper.addEventListener('click', function(){
+    let msg2 = playRound("paper", computerPlay());
+    results.textContent = msg2;
+    if (msg2 == "You won!!!!! Paper beats rock" && pWins < 5 && cWins < 5)
+    {
+        pWins++;
+        player.textContent = pWins;
+        imageComputer.src="https://i.ytimg.com/vi/NtT5oizOFiY/maxresdefault.jpg";
+        imagePlayer.src="https://previews.123rf.com/images/taesmileland/taesmileland1210/taesmileland121000034/15741972-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%9A%A9%EC%A7%80-%EB%8F%84%EB%A9%B4.jpg";
+    }
+    else if (msg2 == "You lose!! Scissors beats paper" && pWins < 5 && cWins < 5)
+    {
+        cWins++;
+        computer.textContent = cWins;
+        imagePlayer.src="https://previews.123rf.com/images/taesmileland/taesmileland1210/taesmileland121000034/15741972-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%9A%A9%EC%A7%80-%EB%8F%84%EB%A9%B4.jpg";
+        imageComputer.src="https://www.clipartmax.com/png/middle/289-2890339_black-scissors-office-drawing-open-sketch-scissors-drawing.png";
+    }
+    else if (msg2 == "Tie!!! PAPER = PAPER" && pWins < 5 && cWins < 5)
+    {
+        imagePlayer.src="https://previews.123rf.com/images/taesmileland/taesmileland1210/taesmileland121000034/15741972-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%9A%A9%EC%A7%80-%EB%8F%84%EB%A9%B4.jpg";
+        imageComputer.src="https://previews.123rf.com/images/taesmileland/taesmileland1210/taesmileland121000034/15741972-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%9A%A9%EC%A7%80-%EB%8F%84%EB%A9%B4.jpg";
+    }
+    if (pWins == 5)
+    {
+        results.textContent = "YOU BEAT THE COMPUTER Mr/Ms LOVELACE";
+    }
+    else if (cWins == 5)
+    {
+        results.textContent = "It's a sad day for humans";
+    }
+});
+scissors.addEventListener('click', function(){
+    let msg3 = playRound("scissors", computerPlay());
+    results.textContent = msg3;
+    if (msg3 == "You won!!!!! Scissors beats paper" && pWins < 5 && cWins < 5)
+    {
+        pWins++;
+        player.textContent = pWins;
+        imagePlayer.src="https://www.clipartmax.com/png/middle/289-2890339_black-scissors-office-drawing-open-sketch-scissors-drawing.png";
+        imageComputer.src="https://previews.123rf.com/images/taesmileland/taesmileland1210/taesmileland121000034/15741972-%EB%85%B8%ED%8A%B8%EB%B6%81-%EC%9A%A9%EC%A7%80-%EB%8F%84%EB%A9%B4.jpg";
+    }
+    else if (msg3 == "You lose!! Rock beats scissors" && pWins < 5 && cWins < 5)
+    {
+        
+        cWins++;
+        computer.textContent = cWins;
+        imagePlayer.src="https://www.clipartmax.com/png/middle/289-2890339_black-scissors-office-drawing-open-sketch-scissors-drawing.png";
+        imageComputer.src="https://i.ytimg.com/vi/NtT5oizOFiY/maxresdefault.jpg";
+    }
+    else if (msg3 == "Tie!!! SCISSORS = SCISSORS" && pWins < 5 && cWins < 5)
+    {
+        imagePlayer.src="https://www.clipartmax.com/png/middle/289-2890339_black-scissors-office-drawing-open-sketch-scissors-drawing.png";
+        imageComputer.src="https://www.clipartmax.com/png/middle/289-2890339_black-scissors-office-drawing-open-sketch-scissors-drawing.png";
+    }
+    if (pWins == 5)
+    {
+        results.textContent = "YOU BEAT THE COMPUTER Mr/Ms LOVELACE";
+    }
+    else if (cWins == 5)
+    {
+        results.textContent = "It's a sad day for humans";
+    }
+});
+
 
 function computerPlay()
 {
@@ -14,7 +120,8 @@ function playRound(playerSelection, computerSelection)
     //rock cases
     if (playerSelection == "rock" && computerSelection == 1)
     {   
-        return "Tie!!!";
+        
+        return "Tie!!! ROCK = ROCK" ;
     }
     else if (playerSelection == "rock" && computerSelection == 0)  
     {
@@ -36,7 +143,7 @@ function playRound(playerSelection, computerSelection)
     }
     else if (playerSelection == "paper" && computerSelection == 2)  
     {
-        return "Tie!!!";
+        return "Tie!!! PAPER = PAPER";
     }
     //scissor cases
     else if (playerSelection == "scissors" && computerSelection === 2)
@@ -46,7 +153,7 @@ function playRound(playerSelection, computerSelection)
     }
     else if (playerSelection == "scissors" && computerSelection === 0)
     {
-        let str = "Tie!!!";
+        let str = "Tie!!! SCISSORS = SCISSORS";
         return str;
     }
     else if (playerSelection == "scissors" && computerSelection === 1)
@@ -54,49 +161,4 @@ function playRound(playerSelection, computerSelection)
         let str = "You lose!! Rock beats scissors";
         return str;
     }
-}
-
-function game()
-{
-    let cpScore = 0, pScore = 0;  
-
-    for(let i = 0; i < 5; i++)
-    {
-        let playerSelection = promptPlayer();
-        let computerSelection = computerPlay();
-        let message = playRound(playerSelection, computerSelection)
-        console.log(message);
-        if (message == "You lose!! Rock beats scissors" || message == "You lose!! Scissors beats paper" || message == "You lose!! Paper beats rock")
-        {
-            cpScore++;
-        }
-        else if (message == "You won!!!!! Scissors beats paper" || message == "You won!!!!! Paper beats rock" || message == "You won!!!!! Rock beats scissors")
-        {
-            pScore++;
-        }
-    }
-
-    if(cpScore > pScore)
-    {
-        console.log("You lost");
-    }
-    else if (pScore > cpScore)
-    {
-        console.log("You won");
-    }
-    else
-    {
-        console.log("Tie");
-    }
-}
-
-function promptPlayer()
-{
-    let playerSelection = prompt("Enter your choice: ")
-    if (playerSelection == null)
-    {
-        console.log("you entered an invalid choice");
-    }
-    playerSelection = playerSelection.toLowerCase();
-    return playerSelection;
 }
